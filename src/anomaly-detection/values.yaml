@@ -1,0 +1,90 @@
+# Default values for anomaly-detection
+# This is a YAML-formatted file.
+# Declare variables to be passed into your templates.
+global:
+  loadbalancerURL: "https://test"
+  ingress:
+    enabled: false
+    className: harness
+    hosts:
+      - my-host.example.org
+    tls:
+      enabled: true
+      secretName: ''
+
+env:
+  config:
+    key1: value1
+  secrets:
+    key2: value2
+
+replicaCount: 2
+
+maxSurge: 100%
+
+maxUnavailable: 0
+
+java:
+  memory: "4096m"
+  memoryLimit: "4096m"
+
+image:
+  registry: docker.io
+  repository: harness/anomaly-detection-signed
+  pullPolicy: IfNotPresent
+  # Overrides the image tag whose default is the chart appVersion.
+  tag: "77300"
+  digest: ""
+
+waitForInitContainer:
+  image:
+    registry: docker.io
+    repository: harness/helm-init-container
+    pullPolicy: IfNotPresent
+    tag: "latest"
+    digest: ""
+
+nameOverride: ""
+fullnameOverride: ""
+
+serviceAccount:
+  create: false
+  annotations: {}
+  name: "harness-default"
+
+podAnnotations: {}
+
+podSecurityContext: {}
+
+securityContext: {}
+
+service:
+  type: ClusterIP
+  port: 8081
+
+ingress:
+  className: nginx
+
+autoscaling:
+  enabled: false
+  minReplicas: 2
+  maxReplicas: 4
+  targetCPUUtilizationPercentage: 70
+
+nodeSelector: {}
+
+tolerations: []
+
+affinity: {}
+
+CE_AWS_TEMPLATE_URL: dummy
+
+DEFAULT_NG_NAMESPACE: 
+
+resources:
+  limits:
+    cpu: "1024m"
+    memory: "2048Mi"
+  requests:
+    cpu: "1024m"
+    memory: "2048Mi"
