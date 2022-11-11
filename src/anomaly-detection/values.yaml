@@ -12,11 +12,6 @@ global:
       enabled: true
       secretName: ''
 
-env:
-  secrets:
-    name: anomaly-detection-secret
-    key: key2
-
 replicaCount: 2
 
 maxSurge: 100%
