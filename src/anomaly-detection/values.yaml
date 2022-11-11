@@ -13,10 +13,9 @@ global:
       secretName: ''
 
 env:
-  config:
-    key1: value1
   secrets:
-    key2: value2
+    name: anomaly-detection-secret
+    key: key2
 
 replicaCount: 2
 

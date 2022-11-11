@@ -1,6 +1,6 @@
 # anomaly-detection
 
-![Version: 0.1.1](https://img.shields.io/badge/Version-0.1.1-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: 1.773.0](https://img.shields.io/badge/AppVersion-1.773.0-informational?style=flat-square)
+![Version: 0.1.2](https://img.shields.io/badge/Version-0.1.2-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: 1.773.0](https://img.shields.io/badge/AppVersion-1.773.0-informational?style=flat-square)
 
 A Helm chart for Kubernetes
 
@@ -21,8 +21,8 @@ A Helm chart for Kubernetes
 | autoscaling.maxReplicas | int | `4` |  |
 | autoscaling.minReplicas | int | `2` |  |
 | autoscaling.targetCPUUtilizationPercentage | int | `70` |  |
-| env.config.key1 | string | `"value1"` |  |
-| env.secrets.key2 | string | `"value2"` |  |
+| env.secrets.key | string | `"key2"` |  |
+| env.secrets.name | string | `"anomaly-detection-secret"` |  |
 | fullnameOverride | string | `""` |  |
 | global.ingress.className | string | `"harness"` |  |
 | global.ingress.enabled | bool | `false` |  |
@@ -40,10 +40,6 @@ A Helm chart for Kubernetes
 | java.memoryLimit | string | `"4096m"` |  |
 | maxSurge | string | `"100%"` |  |
 | maxUnavailable | int | `0` |  |
-| mongoSecrets.password.key | string | `"mongodb-root-password"` |  |
-| mongoSecrets.password.name | string | `"mongodb-replicaset-chart"` |  |
-| mongoSecrets.userName.key | string | `"mongodbUsername"` |  |
-| mongoSecrets.userName.name | string | `"harness-secrets"` |  |
 | nameOverride | string | `""` |  |
 | nodeSelector | object | `{}` |  |
 | podAnnotations | object | `{}` |  |
@@ -59,8 +55,6 @@ A Helm chart for Kubernetes
 | serviceAccount.annotations | object | `{}` |  |
 | serviceAccount.create | bool | `false` |  |
 | serviceAccount.name | string | `"harness-default"` |  |
-| timescaleSecret.password.key | string | `"timescaledbPostgresPassword"` |  |
-| timescaleSecret.password.name | string | `"harness-secrets"` |  |
 | tolerations | list | `[]` |  |
 | waitForInitContainer.image.digest | string | `""` |  |
 | waitForInitContainer.image.pullPolicy | string | `"IfNotPresent"` |  |
