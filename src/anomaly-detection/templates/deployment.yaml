@@ -57,12 +57,6 @@ spec:
           envFrom:
             - configMapRef:
                 name: anomaly-detection
-          env:
-            - name: key2
-              valueFrom:
-                secretKeyRef:
-                  name: {{ .Values.env.secrets.name }}
-                  key: {{ .Values.env.secrets.key }}
       affinity:
         podAntiAffinity:
           requiredDuringSchedulingIgnoredDuringExecution:
