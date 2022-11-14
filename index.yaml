@@ -3,6 +3,20 @@ entries:
   anomaly-detection:
   - apiVersion: v2
     appVersion: 1.773.0
+    created: "2022-11-14T10:48:25.902752489Z"
+    dependencies:
+    - name: harness-common
+      repository: https://harness.github.io/helm-common
+      version: 1.x.x
+    description: A Helm chart for Kubernetes
+    digest: 6fd0c1081fdc4ec26b18b9061d1cadf9ce1d5829a260158ba0de116e4ff89a53
+    name: anomaly-detection
+    type: application
+    urls:
+    - https://github.com/harness/helm-ce-anomaly-detection/releases/download/anomaly-detection-0.1.5/anomaly-detection-0.1.5.tgz
+    version: 0.1.5
+  - apiVersion: v2
+    appVersion: 1.773.0
     created: "2022-11-11T14:20:26.601362172Z"
     dependencies:
     - name: harness-common
@@ -43,4 +57,4 @@ entries:
     urls:
     - https://github.com/harness/helm-ce-anomaly-detection/releases/download/anomaly-detection-0.1.2/anomaly-detection-0.1.2.tgz
     version: 0.1.2
-generated: "2022-11-11T14:20:26.601384073Z"
+generated: "2022-11-14T10:48:25.903094392Z"
