@@ -55,9 +55,6 @@ spec:
             timeoutSeconds: 5
             periodSeconds: 40
             failureThreshold: 20
-          envFrom:
-            - configMapRef:
-                name: anomaly-detection
       affinity:
         podAntiAffinity:
           requiredDuringSchedulingIgnoredDuringExecution:
