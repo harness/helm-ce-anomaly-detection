@@ -1,6 +1,6 @@
 # anomaly-detection
 
-![Version: 0.1.7](https://img.shields.io/badge/Version-0.1.7-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: 1.773.0](https://img.shields.io/badge/AppVersion-1.773.0-informational?style=flat-square)
+![Version: 0.1.8](https://img.shields.io/badge/Version-0.1.8-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: 1.773.0](https://img.shields.io/badge/AppVersion-1.773.0-informational?style=flat-square)
 
 A Helm chart for Kubernetes
 
@@ -29,7 +29,7 @@ A Helm chart for Kubernetes
 | image.digest | string | `""` |  |
 | image.pullPolicy | string | `"IfNotPresent"` |  |
 | image.registry | string | `"docker.io"` |  |
-| image.repository | string | `"harness/anomaly-detection-signed"` |  |
+| image.repository | string | `"harness/ce-anomaly-detection-signed"` |  |
 | image.tag | string | `"12"` |  |
 | ingress.className | string | `"nginx"` |  |
 | java.memory | string | `"4096m"` |  |
